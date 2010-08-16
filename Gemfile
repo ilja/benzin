@@ -31,8 +31,9 @@ gem 'devise'
 # and rake tasks are available in development mode:
 group :development, :test do
 #   gem 'webrat'
+  gem 'capybara'
   gem "rspec-rails",">=2.0.0.beta.5" 
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git' 
+  #gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git' 
   gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git' 
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git' 
   gem 'spork'

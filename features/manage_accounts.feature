@@ -7,6 +7,6 @@ Feature: Account
 		Given I am on the home page
 		And I follow "Sign up"
 		When I enter my account details
-		And I press "Create an account"
-		Then I should see "Account succesfully created"
+		And I press "Sign up"
+		Then I should see "You have signed up successfully"
 		And my account should exist
