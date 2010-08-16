@@ -56,6 +56,7 @@ GEM
     activesupport (3.0.0.rc)
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
+    bcrypt-ruby (2.1.2)
     builder (2.1.2)
     celerity (0.7.9)
     configuration (1.1.0)
@@ -66,6 +67,9 @@ GEM
       json_pure (~> 1.4.3)
       term-ansicolor (~> 1.0.4)
     culerity (0.2.10)
+    devise (1.1.1)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 0.10.7)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -128,6 +132,8 @@ GEM
       polyglot (>= 0.3.1)
     trollop (1.16.2)
     tzinfo (0.3.22)
+    warden (0.10.7)
+      rack (>= 1.0.0)
     webrat (0.7.2.beta.1)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
@@ -140,9 +146,9 @@ DEPENDENCIES
   capybara!
   cucumber-rails!
   database_cleaner!
+  devise
   launchy
   rails (= 3.0.0.rc)
-  rspec (>= 2.0.0.beta.5)
   rspec-rails (>= 2.0.0.beta.5)
   spork
   sqlite3-ruby

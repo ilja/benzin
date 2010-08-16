@@ -4,8 +4,9 @@ Feature: Account
 	I want to manage my account
 
 	Scenario: Create a new account
-		Given I follow "Create a account"
-		And I enter my account details
-		When I press "Create an account"
+		Given I am on the home page
+		And I follow "Sign up"
+		When I enter my account details
+		And I press "Create an account"
 		Then I should see "Account succesfully created"
 		And my account should exist
