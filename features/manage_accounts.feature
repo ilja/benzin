@@ -10,3 +10,21 @@ Feature: Account
 		And I press "Sign up"
 		Then I should see "You have signed up successfully"
 		And my account should exist
+
+	Scenario: Login to my account
+		Given I am a registered user
+		And I am on the home page
+		When I follow "Sign in"
+		And I enter my login details
+		Then I should see "You have logged in successfully"
+		And I should see my email address
+
+	Scenario: Logout from my account
+		Given I am a registerd user
+		And I am logged In
+		When I follow "Log out"
+		Then I should see "You have signed out"
+		And I should see "Sign in"
+
+	Scenario: Edit my account
+	Scenario: Retrieve my account in case of forgotten password
