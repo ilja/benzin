@@ -16,15 +16,16 @@ Feature: Account
 		And I am on the home page
 		When I follow "Sign in"
 		And I enter my login details
-		Then I should see "You have logged in successfully"
+		Then I should see "Signed in successfully."
 		And I should see my email address
 
 	Scenario: Logout from my account
-		Given I am a registerd user
+		Given I am a registered user
 		And I am logged In
-		When I follow "Log out"
-		Then I should see "You have signed out"
+		When I follow "Sign out"
+		Then I should see "Signed out successfully."
 		And I should see "Sign in"
 
 	Scenario: Edit my account
 	Scenario: Retrieve my account in case of forgotten password
+
