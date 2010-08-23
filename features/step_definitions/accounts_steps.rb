@@ -24,7 +24,7 @@ Then /^I should see my email address$/ do
   page.should have_content('testuser@spam.la')
 end
 
-Given /^I am logged In$/ do
+Given /^I am logged in$/ do
   visit new_user_session_path
   fill_in("Email", :with => 'testuser@spam.la')
   fill_in("Password", :with => 'test123')

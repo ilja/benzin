@@ -21,7 +21,7 @@ Feature: Account
 
 	Scenario: Logout from my account
 		Given I am a registered user
-		And I am logged In
+		And I am logged in
 		When I follow "Sign out"
 		Then I should see "Signed out successfully."
 		And I should see "Sign in"
