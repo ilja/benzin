@@ -29,6 +29,7 @@ Given /^I am logged in$/ do
   fill_in("Email", :with => 'testuser@spam.la')
   fill_in("Password", :with => 'test123')
   click_button('Sign in')
+  puts body.inspect
   page.should have_content('testuser@spam.la')
 end
 
