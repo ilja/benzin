@@ -3,31 +3,31 @@ Feature: Car
 	As a registered user
 	I want to create and manage cars
 
-@wip
 	Scenario: Create a new car 
 		Given I am a registered user
 		And I am logged in 
 		When I follow "Create new car"
 		And I enter the details of my Car
-		When I click "Create car"
-		Then I should see "Car successfully created"
+		When I press "Create Car"
+		Then I should see "Car was successfully created"
 		And my car should be created
-	
+
 	Scenario: Edit an existing Car
 		Given I am a registered user
 		And I am logged in
 		And I have created A Car
 		When I edit this Car
 		And I change the brand to "BMW"
-		And I click "Update car"
-		Then I should see "Car successfully updated"
+		And I press "Update Car"
+		Then I should see "Car was successfully updated"
 		And the car should have "BMW" as brand
 
+	@wip
 	Scenario: Destroy a Car
 		Given I am a registered user
 		And I am logged in 
 		And I have created A Car
-		When I go to edit this Car
-		And I click "Delete car"
-		Then I should see "Car successfully deleted"
+		When I edit this Car
+		And I follow "Delete car"
+		Then I should see "Car was successfully deleted"
 		And The car should be deleted

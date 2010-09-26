@@ -1,4 +1,6 @@
 Tddbenzin::Application.routes.draw do
+  resources :cars
+
   devise_for :users
 
   get "home/index"
