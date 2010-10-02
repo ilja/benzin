@@ -3,9 +3,9 @@ Feature: Car
 	As a registered user
 	I want to create and manage cars
 
-	Scenario: Create a new car 
+	Scenario: Create a new car
 		Given I am a registered user
-		And I am logged in 
+		And I am logged in
 		When I follow "Create new car"
 		And I enter the details of my Car
 		When I press "Create Car"
@@ -21,11 +21,10 @@ Feature: Car
 		And I press "Update Car"
 		Then I should see "Car was successfully updated"
 		And the car should have "BMW" as brand
-
-	@wip
+	
 	Scenario: Destroy a Car
 		Given I am a registered user
-		And I am logged in 
+		And I am logged in
 		And I have created A Car
 		When I edit this Car
 		And I follow "Delete car"

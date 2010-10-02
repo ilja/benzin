@@ -16,7 +16,7 @@ end
 
 When /^I edit this Car$/ do
   car = Car.first #todo: beter maken
-  visit edit_car_path car 
+  visit edit_car_path car
 end
 
 Then /^I change the brand to "([^"]*)"$/ do |brand|
@@ -29,6 +29,5 @@ Then /^the car should have "([^"]*)" as brand$/ do |brand|
 end
 
 Then /^The car should be deleted$/ do
-  Car.first.nil == true
+  Car.first == nil
 end
-
