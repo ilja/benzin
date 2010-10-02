@@ -1,7 +1,8 @@
 class FillingsController < ApplicationController
   
   def new
-    @filling = Filling.new
+    car = Car.find(params[:car_id])
+    @filling = car.fillings.new
 
       
       
