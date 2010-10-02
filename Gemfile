@@ -18,6 +18,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'devise'
 
+# faster string escaping
+gem 'escape_utils'
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri', '1.4.1'
