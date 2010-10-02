@@ -1,5 +1,9 @@
 Tddbenzin::Application.routes.draw do
-  resources :cars
+
+  resources :cars do
+    resources :fillings
+  end
+  
 
   devise_for :users
 

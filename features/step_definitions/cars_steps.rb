@@ -1,4 +1,4 @@
-When /^I enter the details of my Car$/ do
+When /^I enter the details of my car$/ do
   fill_in "Brand", :with => 'Mazda'
   fill_in "Model", :with => '626'
   fill_in "Description", :with => 'GLX 2.0 uit 1997'
@@ -9,12 +9,12 @@ Then /^my car should be created$/ do
   assert car.blank? == false
 end
 
-Given /^I have created A Car$/ do
+Given /^I have created a car$/ do
   car = Factory(:car)
   assert car.blank? == false
 end
 
-When /^I edit this Car$/ do
+When /^I edit this car$/ do
   car = Car.first #todo: beter maken
   visit edit_car_path car
 end
@@ -31,3 +31,5 @@ end
 Then /^The car should be deleted$/ do
   Car.first == nil
 end
+
+
