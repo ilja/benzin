@@ -13,7 +13,8 @@ Feature: Fillings
     And I fill in the odometer count as "120000" kilometres
     And I fill in the cost as "75,50" euros
     And I press "Save filling"
-    Then I should see "Filling saved"
+    Then show me the page
+    Then I should see "Filling was successfully saved"
     And I should see the filling in the list of fillings
     
   Scenario: show a filling

@@ -42,5 +42,6 @@ group :development, :test do
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl_rails'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 

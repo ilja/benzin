@@ -1,4 +1,4 @@
-<%= form_for @filling do |f| %>
+<%= form_for [@car, @filling]  do |f| %>
   <div class="field">
     <%= f.label :amount %><br />
     <%= f.text_field :amount %>
@@ -12,7 +12,7 @@
     <%= f.text_area :odometer %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save filling" %>
   </div>
 <% end %>
 

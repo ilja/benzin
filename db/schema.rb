@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101002210236) do
+ActiveRecord::Schema.define(:version => 20101003111603) do
 
   create_table "cars", :force => true do |t|
     t.string   "brand"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20101002210236) do
     t.datetime "updated_at"
   end
 
-  add_index "fillings", ["car_id"], :name => "index_fillings_on_car_id", :unique => true
+  add_index "fillings", ["car_id"], :name => "index_fillings_on_car_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
