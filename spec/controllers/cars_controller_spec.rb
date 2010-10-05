@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe CarsController do
+  render_views
+  
+  before(:each) do
+    sign_in Factory(:user)
+  end
 
   def mock_car(stubs={})
     @mock_car ||= mock_model(Car, stubs).as_null_object

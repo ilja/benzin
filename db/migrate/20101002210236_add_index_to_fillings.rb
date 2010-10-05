@@ -1,6 +1,6 @@
 class AddIndexToFillings < ActiveRecord::Migration
   def self.up
-    add_index :fillings, :car_id, :unique => true
+    add_index :fillings, :car_id, :unique => false
   end
 
   def self.down
