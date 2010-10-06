@@ -38,7 +38,23 @@ describe FillingsController do
   end
 
   describe "POST create" do
-    it "should create the new filling" do
+    it "should create a new filling for @car" do
+      post :create, :car_id => @car.id, :filling => { :amount => '54', :price => '74.56', :odometer => '135123' }
+      assigns(:filling).should_not be_new_record
+      response.should redirect_to(car_fillings_path)
+    end
+    
+    it "should fail creating a invalid filling for @car" do
+      post :create, :car_id => @car.id, :filling => { :price => 'test', :odometer => '135123' }
+      assigns(:filling).should be_new_record
+      response.should render_template('new')
+    end
+    
+    it "should pass params to filling" do
+      post 'create', :car_id => @car.id, :filling => { :amount => '54', :price => '74.56', :odometer => '135123' }
+      assigns[:filling].amount.should == BigDecimal('54')
+      assigns[:filling].price.should == BigDecimal('74.56')
+      assigns[:filling].odometer.should == 135123
     end
   end
 end
