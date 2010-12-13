@@ -1,0 +1,2 @@
+# use ruby 1.9.2 and gemset rails3 (create gemset if not available)
+rvm use 1.9.2@rails3 --create

@@ -40,6 +40,7 @@ group :development, :test do
   gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'spork'
+  #gem 'autotest'
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl_rails'
   gem 'ruby-debug19', :require => 'ruby-debug'
