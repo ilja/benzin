@@ -13,13 +13,15 @@ class FillingsController < ApplicationController
   def create
     @car = Car.find(params[:car_id])
     @filling = @car.fillings.create(params[:filling])
-    respond_to do |format|
-      if @filling.save
-        format.html { redirect_to car_fillings_path(@car.id), :notice => "Filling was successfully saved." }
-      else
-        render :action => "new"
-      end
+    puts @car.inspect
+    puts @filling.inspect
+    
+    if @filling.save
+      redirect_to car_fillings_path(@car.id), :notice => "Filling was successfully saved."
+    else
+      render :action => "new"
     end
+    
   end
   
 end

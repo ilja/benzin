@@ -1,0 +1,1 @@
+#specify what a guest can or cannot do?

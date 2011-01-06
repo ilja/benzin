@@ -11,11 +11,12 @@ Feature: Fillings
     When I follow "new filling"
     And I fill in the gasoline amount as "50" litres
     And I fill in the odometer count as "120000" kilometres
-    And I fill in the cost as "75,50" euros
+    And I fill in the cost as "75.50" euros
     And I press "Save filling"
-    Then show me the page
+   # Then I pause for a while
+    #Then show me the page
     Then I should see "Filling was successfully saved"
-    And I should see the filling in the list of fillings
+    #And I should see the filling in the list of fillings
     
   Scenario: show a filling
   Scenario: Edit a filling
