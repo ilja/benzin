@@ -16,11 +16,11 @@ Feature: Fillings
    # Then I pause for a while
     #Then show me the page
     Then I should see "Filling was successfully saved"
-    #And I should see the filling in the list of fillings
+    And I should see amount "50", cost "75.50" and kilometres "120000" in the list of fillings
     
   Scenario: show a filling
   Scenario: Edit a filling
   Scenario: Delete a filling
   
-  Scenario: Calculate mileage based on fillings
+
     
