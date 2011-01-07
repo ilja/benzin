@@ -32,4 +32,9 @@ Then /^The car should be deleted$/ do
   Car.first == nil
 end
 
+Given /^I visit the page of my car$/ do
+  car = Factory.create(:car)
+  
+  visit car_path car
+end
 

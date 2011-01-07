@@ -16,6 +16,32 @@
 </p>
 
 
+<h1>Listing fillings</h1>
+<table border="0" cellspacing="5" cellpadding="5" id="fillings">
+  <tr>
+    <th>Amount</th>
+    <th>Price</th>
+    <th>Kilometres</th>
+  </tr>
+  
+  
+<% if !@car.fillings.blank? %>
+  <% for filling in @car.fillings %>
+    <tr>
+      <td><%= "%.2f" % filling.amount %></td>
+      <td><%= "%.2f" % filling.price %></td>
+      <td><%= filling.odometer %></td>
+    </tr>
+  <% end %>
+<% else %>
+<tr>
+  <td colspan="3">No fillings here.</td>
+</tr>
+<% end %>
+</table>
+
+
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %> |
 <%= link_to 'new filling', new_car_filling_path(@car) %>
