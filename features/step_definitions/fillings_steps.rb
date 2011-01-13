@@ -18,11 +18,13 @@ end
 
 Given /^I have added a filling$/ do
   car = Car.first
-  Factory.create(:filling, :car => car)
+  filling = Factory.create(:filling, :car => car)
+  car.save
+  puts filling.inspect
 end
 
 When /^I should see this filling in the list of fillings$/ do
-  visit show_car_path Car.first
+  visit car_path Car.first
   within_table('fillings') do
     page.should have_xpath('//tr/td')
   end
@@ -39,7 +41,7 @@ When /^I change amount to "([^"]*)"$/ do |amount|
 end
 
 When /^I delete this filling$/ do
-  save_and_open_page
+  #save_and_open_page
   within_table('fillings') do
     within(:xpath, "//tr/td") do
       click_link 'Destroy'

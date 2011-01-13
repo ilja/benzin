@@ -1,24 +1,4 @@
 <h1>Listing fillings</h1>
-<table border="0" cellspacing="5" cellpadding="5" id="fillings">
-  <tr>
-    <th>Amount</th>
-    <th>Price</th>
-    <th>Kilometres</th>
-  </tr>
-  
-  
-<% if !@fillings.blank? %>
-  <% for filling in @fillings %>
-    <tr>
-      <td><%= "%.2f" % filling.amount %></td>
-      <td><%= "%.2f" % filling.price %></td>
-      <td><%= filling.odometer %></td>
-      <td><%= link_to 'Destroy', car_filling_path(@car, filling), :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-<% else %>
-<tr>
-  <td colspan="3">No fillings here.</td>
-</tr>
-<% end %>
-</table>
+
+
+<%= render :partial => 'fillings/fillings', :locals => {:fillings => @car.fillings} %>

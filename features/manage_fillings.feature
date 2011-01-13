@@ -26,9 +26,11 @@ Feature: Fillings
     And I press "Save filling"
     Then I should see "Filling was successfully updated"
 
+  @wip
   Scenario: Delete a filling
     Given I visit the page of my car
     And I have added a filling
+   # Then show me the page
     When I delete this filling
     Then I should see "Filling succesfully removed"
     And the list of fillings should be empty
